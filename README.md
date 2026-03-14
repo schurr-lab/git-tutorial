@@ -340,13 +340,71 @@ A **commit** records your changes.
 
 ---
 
-# Step 10 — Push to GitHub
+# Step 10 — Push Your Branch to GitHub
+
+Upload your branch to GitHub using:
 
 ```bash
 git push origin add-yourname
 ```
 
-This uploads your branch to GitHub.
+Example:
+
+```bash
+git push origin add-alice-smith
+```
+
+### What this command means
+
+```
+git push <remote> <branch>
+```
+
+- **origin** → the GitHub repository you cloned from  
+- **add-yourname** → the branch you created earlier
+
+This command sends your new branch to GitHub so that a **Pull Request** can be created.
+
+---
+
+### Optional: Check your current branch
+
+If you are unsure which branch you are on, run:
+
+```bash
+git branch
+```
+
+The current branch will have a `*` next to it.
+
+Example:
+
+```
+* add-alice-smith
+  main
+```
+
+---
+
+### If you see an error
+
+If Git reports something like:
+
+```
+error: src refspec add-yourname does not match any
+```
+
+it usually means that:
+
+- the branch name is different, or
+- you have not created a commit yet.
+
+Make sure you completed **Step 9 (commit your changes)** before pushing.
+
+---
+
+Once the push finishes successfully, continue to the next step to **open a Pull Request on GitHub**.
+
 
 ---
 
