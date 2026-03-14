@@ -40,7 +40,7 @@ https://www.markdownguide.org/basic-syntax/
 
 1. Go to https://github.com  
 2. Create an account using your academic email  
-3. Send your **GitHub username** to the lab admin so you can be added to the organization
+3. Send your **GitHub username** to the lab admin (currently Roey) so you can be added to the organization
 
 ---
 
@@ -98,7 +98,7 @@ Make sure the email matches your GitHub account.
 # Step 3 — Clone This Repository
 
 ```bash
-git clone https://github.com/YOUR-LAB-NAME/git-intro.git
+git clone https://github.com/schurr-lab/git-tutorial.git
 cd git-intro
 ```
 
