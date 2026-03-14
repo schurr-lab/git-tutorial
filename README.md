@@ -173,7 +173,7 @@ git-tutorial/
 Enter the repository folder:
 
 ```bash
-cd git-intro
+cd git-tutorial
 ```
 
 You are now ready to continue the tutorial.
