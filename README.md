@@ -59,6 +59,50 @@ Once you finish it, return here to continue.
 
 If you are working on a **lab computer**, Git may already be installed.
 
+# Opening a Terminal
+
+Many of the commands in this tutorial are run in a **terminal** (also called a command line or shell).
+
+<details>
+<summary><strong>Mac</strong></summary>
+
+1. Press **Command + Space** to open Spotlight search  
+2. Type **Terminal**  
+3. Press **Enter**
+
+Alternatively:
+
+1. Open **Finder**
+2. Go to **Applications → Utilities**
+3. Open **Terminal**
+
+A new window will appear where you can type commands.
+
+</details>
+
+---
+
+<details>
+<summary><strong>Windows</strong></summary>
+
+If you installed **Git for Windows**, you should use **Git Bash**.
+
+1. Click the **Start menu**
+2. Search for **Git Bash**
+3. Open it
+
+A terminal window will appear where you can type commands.
+
+You can also right-click inside any folder in File Explorer and select:
+
+```
+Open Git Bash here
+```
+
+This opens the terminal directly in that folder.
+
+</details>
+
 Open a terminal and run:
 
 ```bash
