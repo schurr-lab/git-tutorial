@@ -16,23 +16,17 @@ Most students use **Mac + PyCharm**, but we start with the **command line workfl
 
 ---
 
-# 📚 Useful Resources
+# What are Git and GitHub?
 
-**Git tutorial**
+**Git** is a version control system. It tracks changes to files over time and allows multiple people to collaborate on the same project without overwriting each other's work.
 
-https://git-scm.com/docs/gittutorial
+Key ideas in Git:
 
-**GitHub Hello World**
+- A **repository** stores a project and its history.
+- A **commit** records a snapshot of changes.
+- A **branch** allows you to work on changes without affecting the main project.
 
-https://docs.github.com/en/get-started/quickstart/hello-world
-
-**Install Git**
-
-https://git-scm.com/downloads
-
-**Markdown guide**
-
-https://www.markdownguide.org/basic-syntax/
+**GitHub** is a cloud platform that hosts Git repositories and provides tools for collaboration such as pull requests, issue tracking, and code review.
 
 ---
 
@@ -44,7 +38,44 @@ https://www.markdownguide.org/basic-syntax/
 
 ---
 
-# Step 1 — Install Git
+# Step 1 — Complete the GitHub "Hello World" Tutorial
+
+Before continuing, complete the official GitHub beginner tutorial:
+
+https://docs.github.com/en/get-started/start-your-journey/hello-world
+
+This short tutorial will introduce:
+
+- repositories
+- commits
+- branches
+- pull requests
+
+Once you finish it, return here to continue.
+
+---
+
+# Step 2 — Check Whether Git Is Already Installed
+
+If you are working on a **lab computer**, Git may already be installed.
+
+Open a terminal and run:
+
+```bash
+git --version
+```
+
+If Git is installed, you will see a version number such as:
+
+```
+git version 2.x.x
+```
+
+If the command fails, install Git as described below.
+
+---
+
+# Step 3 — Install Git
 
 <details>
 <summary><strong>Mac (most students)</strong></summary>
@@ -82,7 +113,7 @@ Using **Git Bash** allows you to copy commands directly from this tutorial.
 
 ---
 
-# Step 2 — Configure Git (First Time Only)
+# Step 4 — Configure Git (First Time Only)
 
 Run:
 
@@ -95,15 +126,13 @@ Make sure the email matches your GitHub account.
 
 ---
 
-# Step 3 — Clone This Repository
+# Step 5 — Clone This Repository
 
 First decide **where on your computer you want to store your projects**.
 
-For example, many people keep code in a folder called `projects` or `repos`.
+Many people keep code in a folder called `projects` or `repos`.
 
-### Option A — Clone into the current folder
-
-Navigate to the directory where you want the repository to live (use "/" or "\\" and not "\" as the latter will fail on Windows):
+Navigate there:
 
 ```bash
 cd path/to/your/projects
@@ -117,6 +146,7 @@ cd git-tutorial
 ```
 
 ---
+
 # GitHub Sign-In (Important)
 
 When you run `git clone`, Git may open a **GitHub login window** in your browser.
@@ -125,8 +155,8 @@ This is normal. GitHub requires authentication when accessing organization repos
 
 You will see two options:
 
-• **Sign in with your browser (recommended)**  
-• **Use a Personal Access Token**
+- **Sign in with your browser (recommended)**
+- **Use a Personal Access Token**
 
 Choose **Sign in with your browser**.
 
@@ -151,7 +181,7 @@ Some users see a page asking them to authorize the **Git Ecosystem**.
 
 If this page appears:
 
-1. Click the **Git Ecosystem** option
+1. Click **Git Ecosystem**
 2. The **green confirmation button** will become enabled
 3. Click the green button to continue
 
@@ -178,40 +208,9 @@ cd git-tutorial
 
 You are now ready to continue the tutorial.
 
-### Option B — Clone and specify the folder name
-
-You can also tell Git exactly what folder to create:
-
-```bash
-git clone https://github.com/schurr-lab/git-tutorial.git my-git-practice
-cd git-tutorial
-```
-
-This will create a directory called:
-
-```
-my-git-practice/
-```
-
-containing the repository.
-
 ---
 
-After cloning, you should see something like this:
-
-```
-git-tutorial/
-├── README.md
-├── students.md
-└── practice/
-```
-
-You are now ready to continue with the tutorial.
-
-
----
-
-# Step 4 — Create Your Own Branch
+# Step 6 — Create Your Own Branch
 
 Create a branch using your name:
 
@@ -229,7 +228,7 @@ Branches allow you to make changes without affecting the main project.
 
 ---
 
-# Step 5 — Add Yourself to `students.md`
+# Step 7 — Add Yourself to `students.md`
 
 Open the file:
 
@@ -247,7 +246,7 @@ Save the file.
 
 ---
 
-# Step 6 — Practice Task
+# Step 8 — Practice Task
 
 Inside the `practice/` folder create a new file named:
 
@@ -272,7 +271,7 @@ Save the file.
 
 ---
 
-# Step 7 — Commit Your Changes
+# Step 9 — Commit Your Changes
 
 ```bash
 git add students.md practice/yourname.txt
@@ -283,7 +282,7 @@ A **commit** records your changes.
 
 ---
 
-# Step 8 — Push to GitHub
+# Step 10 — Push to GitHub
 
 ```bash
 git push origin add-yourname
@@ -293,7 +292,7 @@ This uploads your branch to GitHub.
 
 ---
 
-# Step 9 — Open a Pull Request
+# Step 11 — Open a Pull Request
 
 1. Go to the repository on GitHub  
 2. Click **Compare & pull request**  
@@ -323,57 +322,36 @@ This is the **standard collaboration workflow used in the lab**.
 
 # Appendix — Using PyCharm Instead of the Terminal
 
-<details>
-<summary><strong>PyCharm workflow</strong></summary>
+If you prefer using **PyCharm**, follow the official JetBrains guide:
 
-### Clone repository
+https://www.jetbrains.com/help/pycharm/set-up-a-git-repository.html
 
-Open PyCharm → **Get from VCS**
+Typical workflow in PyCharm:
 
-Paste the repository URL and clone.
+1. **Clone repository**
 
----
+   File → **Get from VCS**
 
-### Create a branch
+2. **Create a branch**
 
-Bottom right corner → click branch name → **New Branch**
+   Bottom-right corner → branch name → **New Branch**
 
-Name it:
+3. **Edit files**
 
-```
-add-yourname
-```
+   Modify:
 
----
+   ```
+   students.md
+   practice/yourname.txt
+   ```
 
-### Edit files
+4. **Commit and Push**
 
-Modify:
+   Open the **Commit** tab → select files → **Commit and Push**
 
-```
-students.md
-practice/yourname.txt
-```
+5. **Open Pull Request**
 
----
-
-### Commit
-
-Open the **Commit** tab.
-
-Select the files, write a commit message, then click:
-
-```
-Commit and Push
-```
-
----
-
-### Open Pull Request
-
-Go to the repository page on GitHub and create the pull request.
-
-</details>
+   Go to the repository page on GitHub and create the pull request.
 
 ---
 
@@ -409,6 +387,19 @@ git-tutorial/
 │
 └── .gitignore
 ```
+
+---
+
+# Additional Resources
+
+Git tutorial  
+https://git-scm.com/docs/gittutorial
+
+GitHub documentation  
+https://docs.github.com
+
+Markdown guide  
+https://www.markdownguide.org/basic-syntax/
 
 ---
 
