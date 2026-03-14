@@ -53,13 +53,7 @@ This short tutorial will introduce:
 
 Once you finish it, return here to continue.
 
----
-
-# Step 2 — Check Whether Git Is Already Installed
-
-If you are working on a **lab computer**, Git may already be installed.
-
-# Opening a Terminal
+# Step 1.5 — Opening a Terminal
 
 Many of the commands in this tutorial are run in a **terminal** (also called a command line or shell).
 
@@ -116,6 +110,12 @@ git version 2.x.x
 ```
 
 If the command fails, install Git as described below.
+
+---
+
+# Step 2 — Check Whether Git Is Already Installed
+
+If you are working on a **lab computer**, Git may already be installed.
 
 ---
 
