@@ -284,13 +284,23 @@ Open the file:
 students.md
 ```
 
+You can open it using **any text editor or IDE**, for example:
+
+- PyCharm
+- VS Code
+- Notepad (Windows)
+- TextEdit (Mac)
+- or any editor you normally use
+
+Navigate to the repository folder (`git-tutorial`) and open the file `students.md`.
+
 Add your name at the bottom:
 
 ```markdown
 - Alice Smith – PhD Student – 2026
 ```
 
-Save the file.
+Save the file after editing.
 
 ---
 
