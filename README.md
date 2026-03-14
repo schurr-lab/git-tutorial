@@ -97,12 +97,57 @@ Make sure the email matches your GitHub account.
 
 # Step 3 — Clone This Repository
 
+First decide **where on your computer you want to store your projects**.
+
+For example, many people keep code in a folder called `projects` or `repos`.
+
+### Option A — Clone into the current folder
+
+Navigate to the directory where you want the repository to live:
+
+```bash
+cd path/to/your/projects
+```
+
+Then clone the repository:
+
 ```bash
 git clone https://github.com/schurr-lab/git-tutorial.git
 cd git-tutorial
 ```
 
-This downloads the repository to your computer.
+---
+
+### Option B — Clone and specify the folder name
+
+You can also tell Git exactly what folder to create:
+
+```bash
+git clone https://github.com/schurr-lab/git-tutorial.git my-git-practice
+cd git-tutorial
+```
+
+This will create a directory called:
+
+```
+my-git-practice/
+```
+
+containing the repository.
+
+---
+
+After cloning, you should see something like this:
+
+```
+git-tutorial/
+├── README.md
+├── students.md
+└── practice/
+```
+
+You are now ready to continue with the tutorial.
+
 
 ---
 
