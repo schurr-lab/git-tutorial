@@ -2,15 +2,19 @@
 
 Welcome! Before contributing to lab repositories, please complete this short Git & GitHub tutorial.
 
-By the end, you will learn how to:
+The **most important goal** is to learn how to keep your work safely backed up using GitHub.
+
+A good habit is to **commit and push your code at the end of every work day**.
+
+By the end of this tutorial, you will know how to:
 
 - Create a GitHub account
 - Clone a repository
-- Create a branch
+- Edit files in a repository
 - Commit changes
-- Push to GitHub
-- Open a Pull Request
-- Modify files inside a practice folder
+- Push changes to GitHub
+
+Later you will typically create **your own repository for your projects** and use GitHub as a backup and version history.
 
 Most students use **Mac + PyCharm**, but we start with the **command line workflow** because it works everywhere.
 
@@ -18,15 +22,20 @@ Most students use **Mac + PyCharm**, but we start with the **command line workfl
 
 # What are Git and GitHub?
 
-**Git** is a version control system. It tracks changes to files over time and allows multiple people to collaborate on the same project without overwriting each other's work.
+**Git** is a version control system. It tracks changes to files over time and allows you to return to earlier versions of your code.
 
-Key ideas in Git:
+Key ideas:
 
 - A **repository** stores a project and its history.
-- A **commit** records a snapshot of changes.
-- A **branch** allows you to work on changes without affecting the main project.
+- A **commit** records a snapshot of your changes.
+- You can always go back to previous commits.
 
-**GitHub** is a cloud platform that hosts Git repositories and provides tools for collaboration such as pull requests, issue tracking, and code review.
+**GitHub** is a website that hosts Git repositories online.  
+This allows you to:
+
+- back up your code
+- work across multiple computers
+- collaborate with others
 
 ---
 
@@ -44,7 +53,7 @@ Before continuing, complete the official GitHub beginner tutorial:
 
 https://docs.github.com/en/get-started/start-your-journey/hello-world
 
-This short tutorial will introduce:
+This tutorial introduces:
 
 - repositories
 - commits
@@ -57,22 +66,16 @@ Once you finish it, return here to continue.
 
 # Step 1.5 — Opening a Terminal
 
-Many of the commands in this tutorial are run in a **terminal** (also called a command line or shell).
+Many commands in this tutorial are run in a **terminal** (also called a command line).
 
 <details>
 <summary><strong>Mac</strong></summary>
 
-1. Press **Command + Space** to open Spotlight search  
-2. Type **Terminal**  
-3. Press **Enter**
+Press **Command + Space**, type **Terminal**, and press **Enter**.
 
 Alternatively:
 
-1. Open **Finder**
-2. Go to **Applications → Utilities**
-3. Open **Terminal**
-
-A new window will appear where you can type commands.
+Finder → Applications → Utilities → Terminal
 
 </details>
 
@@ -81,23 +84,21 @@ A new window will appear where you can type commands.
 <details>
 <summary><strong>Windows</strong></summary>
 
-You can use either **Command Prompt** or **PowerShell**.
+You can use **Command Prompt** or **PowerShell**.
 
-### Option 1 — Command Prompt (simplest)
+Option 1 — Command Prompt
 
-1. Click the **Start Menu**
+1. Click the Start Menu
 2. Type **cmd**
 3. Open **Command Prompt**
 
-### Option 2 — PowerShell
+Option 2 — PowerShell
 
-1. Click the **Start Menu**
+1. Click the Start Menu
 2. Type **PowerShell**
 3. Open **Windows PowerShell**
 
-A terminal window will appear where you can type commands.
-
-After installing Git, you may also use **Git Bash**, which comes with Git for Windows and behaves more like a Linux/Mac terminal.
+After installing Git, you may also use **Git Bash**.
 
 </details>
 
@@ -105,36 +106,38 @@ After installing Git, you may also use **Git Bash**, which comes with Git for Wi
 
 # Step 2 — Check Whether Git Is Already Installed
 
-If you are working on a **lab computer**, Git may already be installed.
+On some lab computers Git may already be installed.
 
-Open a terminal and run:
+Run:
 
 ```bash
 git --version
 ```
 
-If Git is installed, you will see a version number such as:
+If you see something like:
 
 ```
 git version 2.x.x
 ```
 
-If the command fails, install Git as described below.
+Git is already installed.
+
+If not, install it in the next step.
 
 ---
 
 # Step 3 — Install Git
 
 <details>
-<summary><strong>Mac (most students)</strong></summary>
+<summary><strong>Mac</strong></summary>
 
-Open **Terminal** and run:
+Run:
 
 ```bash
 git --version
 ```
 
-If Git is not installed, macOS will prompt you to install **Command Line Tools**. Accept.
+macOS will prompt you to install Command Line Tools.
 
 </details>
 
@@ -143,19 +146,15 @@ If Git is not installed, macOS will prompt you to install **Command Line Tools**
 <details>
 <summary><strong>Windows</strong></summary>
 
-1. Install **Git for Windows**
+Install Git:
 
 https://git-scm.com/downloads
 
-2. Open **Git Bash** (recommended)
-
-Verify installation:
+Then open **Git Bash** and verify:
 
 ```bash
 git --version
 ```
-
-Using **Git Bash** allows you to copy commands directly from this tutorial.
 
 </details>
 
@@ -176,9 +175,7 @@ Make sure the email matches your GitHub account.
 
 # Step 5 — Clone This Repository
 
-First decide **where on your computer you want to store your projects**.
-
-Many people keep code in a folder called `projects` or `repos`.
+Choose where you want to store your projects.
 
 Navigate there:
 
@@ -186,7 +183,7 @@ Navigate there:
 cd path/to/your/projects
 ```
 
-Then clone the repository:
+Clone the repository:
 
 ```bash
 git clone https://github.com/schurr-lab/git-tutorial.git
@@ -195,51 +192,23 @@ cd git-tutorial
 
 ---
 
-# GitHub Sign-In (Important)
+# GitHub Sign-In
 
-When you run `git clone`, Git may open a **GitHub login window** in your browser.
+Git may open a **GitHub login window** in your browser.
 
-This is normal. GitHub requires authentication when accessing organization repositories.
+Choose:
 
-You will see two options:
+**Sign in with your browser**
 
-- **Sign in with your browser (recommended)**
-- **Use a Personal Access Token**
+If you use **two-factor authentication**, enter the code from your authenticator app.
 
-Choose **Sign in with your browser**.
-
----
-
-# Two-Factor Authentication
-
-If you have **two-factor authentication (2FA)** enabled on GitHub, you may be asked to verify your login.
-
-Common methods include:
-
-- GitHub mobile app
-- Authenticator apps (Authy, Google Authenticator, etc.)
-
-Open your authenticator app and enter the **6-digit code** when prompted.
-
----
-
-# Important Note (Git Ecosystem Screen)
-
-Some users see a page asking them to authorize the **Git Ecosystem**.
-
-If this page appears:
-
-1. Click **Git Ecosystem**
-2. The **green confirmation button** will become enabled
-3. Click the green button to continue
-
-After authorization completes, the repository will finish cloning automatically.
+If a page asks you to authorize the **Git Ecosystem**, click it and confirm.
 
 ---
 
 # After Cloning
 
-You should now see a new directory:
+You should see:
 
 ```
 git-tutorial/
@@ -248,35 +217,15 @@ git-tutorial/
 └── practice/
 ```
 
-Enter the repository folder:
+Enter the repository:
 
 ```bash
 cd git-tutorial
 ```
 
-You are now ready to continue the tutorial.
-
 ---
 
-# Step 6 — Create Your Own Branch
-
-Create a branch using your name:
-
-```bash
-git checkout -b add-yourname
-```
-
-Example:
-
-```bash
-git checkout -b add-alice-smith
-```
-
-Branches allow you to make changes without affecting the main project.
-
----
-
-# Step 7 — Add Yourself to `students.md`
+# Step 6 — Edit the File `students.md`
 
 Open the file:
 
@@ -284,29 +233,26 @@ Open the file:
 students.md
 ```
 
-You can open it using **any text editor or IDE**, for example:
+You can use **any text editor**, for example:
 
 - PyCharm
 - VS Code
-- Notepad (Windows)
-- TextEdit (Mac)
-- or any editor you normally use
+- Notepad
+- TextEdit
 
-Navigate to the repository folder (`git-tutorial`) and open the file `students.md`.
-
-Add your name at the bottom:
+Add your name:
 
 ```markdown
 - Alice Smith – PhD Student – 2026
 ```
 
-Save the file after editing.
+Save the file.
 
 ---
 
-# Step 8 — Practice Task
+# Step 7 — Practice Task
 
-Inside the `practice/` folder create a new file named:
+Inside the `practice/` folder create a file:
 
 ```
 yourname.txt
@@ -318,18 +264,18 @@ Example:
 alice-smith.txt
 ```
 
-Inside the file write:
+Write:
 
 ```
 Hello GitHub!
-This is my first branch and pull request.
+This is my first Git commit.
 ```
 
 Save the file.
 
 ---
 
-# Step 9 — Commit Your Changes
+# Step 8 — Commit Your Changes
 
 ```bash
 git add students.md practice/yourname.txt
@@ -340,169 +286,79 @@ A **commit** records your changes.
 
 ---
 
-# Step 10 — Push Your Branch to GitHub
-
-Upload your branch to GitHub using:
+# Step 9 — Push Your Changes to GitHub
 
 ```bash
-git push origin add-yourname
+git push
 ```
 
-Example:
+This uploads your changes to GitHub.
 
-```bash
-git push origin add-alice-smith
-```
-
-### What this command means
-
-```
-git push <remote> <branch>
-```
-
-- **origin** → the GitHub repository you cloned from  
-- **add-yourname** → the branch you created earlier
-
-This command sends your new branch to GitHub so that a **Pull Request** can be created.
+Now your work is safely stored online.
 
 ---
 
-### Optional: Check your current branch
+# Daily Workflow (Most Important Habit)
 
-If you are unsure which branch you are on, run:
+When working on your own projects:
 
-```bash
-git branch
-```
-
-The current branch will have a `*` next to it.
-
-Example:
+1. Edit your files
+2. Save them
+3. Commit your work
 
 ```
-* add-alice-smith
-  main
+git add .
+git commit -m "Describe what you did"
+git push
 ```
 
----
-
-### If you see an error
-
-If Git reports something like:
-
-```
-error: src refspec add-yourname does not match any
-```
-
-it usually means that:
-
-- the branch name is different, or
-- you have not created a commit yet.
-
-Make sure you completed **Step 9 (commit your changes)** before pushing.
-
----
-
-Once the push finishes successfully, continue to the next step to **open a Pull Request on GitHub**.
-
-
----
-
-# Step 11 — Open a Pull Request
-
-1. Go to the repository on GitHub  
-2. Click **Compare & pull request**  
-3. Add a short description  
-4. Click **Create Pull Request**
-
-A lab admin will review and merge it.
-
-🎉 **Congratulations — you completed your first Git workflow!**
-
----
-
-# What You Just Learned
-
-You practiced:
-
-- cloning a repository
-- creating branches
-- editing files
-- committing changes
-- pushing to GitHub
-- creating pull requests
-
-This is the **standard collaboration workflow used in the lab**.
+Doing this **at the end of every day** ensures your code is always backed up.
 
 ---
 
 # Appendix — Using PyCharm Instead of the Terminal
 
-If you prefer using **PyCharm**, follow the official JetBrains guide:
+If you prefer PyCharm:
 
 https://www.jetbrains.com/help/pycharm/set-up-a-git-repository.html
 
-Typical workflow in PyCharm:
+Typical workflow:
 
 1. **Clone repository**
 
-   File → **Get from VCS**
+File → Get from VCS
 
-2. **Create a branch**
+2. **Edit files**
 
-   Bottom-right corner → branch name → **New Branch**
+3. **Commit**
 
-3. **Edit files**
+Use the **Commit** tab.
 
-   Modify:
+4. **Push**
 
-   ```
-   students.md
-   practice/yourname.txt
-   ```
-
-4. **Commit and Push**
-
-   Open the **Commit** tab → select files → **Commit and Push**
-
-5. **Open Pull Request**
-
-   Go to the repository page on GitHub and create the pull request.
+Click **Push**.
 
 ---
 
-# Lab Git Rules
+# Advanced Topics (Optional)
 
-Please follow these conventions:
+These features are important when **collaborating on shared repositories**.
 
-- Always create a **branch** for changes
-- Never push directly to **main**
-- Use **pull requests** for merging
-- Write **clear commit messages**
+### Branches
 
----
+Branches allow you to work on changes without affecting the main project.
 
-# Optional Challenge
-
-Try one of the following:
-
-- Improve your `practice/` file and make a second commit
-- Edit this README and submit another pull request
-- Add a Markdown file instead of `.txt`
-
----
-
-# Repository Structure
+Example:
 
 ```
-git-tutorial/
-│
-├── README.md
-├── students.md
-├── practice/
-│
-└── .gitignore
+git checkout -b new-feature
 ```
+
+### Pull Requests
+
+A **Pull Request** asks maintainers to review and merge your changes.
+
+This is commonly used when multiple researchers collaborate on the same codebase.
 
 ---
 
@@ -521,6 +377,6 @@ https://www.markdownguide.org/basic-syntax/
 
 # Maintainers
 
-Lab administrators review and merge pull requests.
+Lab administrators review and maintain this repository.
 
 If you encounter problems, open a **GitHub issue** or ask a lab member.
