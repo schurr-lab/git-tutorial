@@ -117,6 +117,66 @@ cd git-tutorial
 ```
 
 ---
+# GitHub Sign-In (Important)
+
+When you run `git clone`, Git may open a **GitHub login window** in your browser.
+
+This is normal. GitHub requires authentication when accessing organization repositories.
+
+You will see two options:
+
+• **Sign in with your browser (recommended)**  
+• **Use a Personal Access Token**
+
+Choose **Sign in with your browser**.
+
+---
+
+# Two-Factor Authentication
+
+If you have **two-factor authentication (2FA)** enabled on GitHub, you may be asked to verify your login.
+
+Common methods include:
+
+- GitHub mobile app
+- Authenticator apps (Authy, Google Authenticator, etc.)
+
+Open your authenticator app and enter the **6-digit code** when prompted.
+
+---
+
+# Important Note (Git Ecosystem Screen)
+
+Some users see a page asking them to authorize the **Git Ecosystem**.
+
+If this page appears:
+
+1. Click the **Git Ecosystem** option
+2. The **green confirmation button** will become enabled
+3. Click the green button to continue
+
+After authorization completes, the repository will finish cloning automatically.
+
+---
+
+# After Cloning
+
+You should now see a new directory:
+
+```
+git-tutorial/
+├── README.md
+├── students.md
+└── practice/
+```
+
+Enter the repository folder:
+
+```bash
+cd git-intro
+```
+
+You are now ready to continue the tutorial.
 
 ### Option B — Clone and specify the folder name
 
