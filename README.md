@@ -1,201 +1,314 @@
-# git-tutorial
-A short tutorial for getting to know git and github
-
-👋 Welcome to the Lab – Git & GitHub Onboarding
+# 👋 Lab Git & GitHub Onboarding
 
 Welcome! Before contributing to lab repositories, please complete this short Git & GitHub tutorial.
 
-By the end, you will:
+By the end, you will learn how to:
 
-Create a GitHub account
+- Create a GitHub account
+- Clone a repository
+- Create a branch
+- Commit changes
+- Push to GitHub
+- Open a Pull Request
+- Modify files inside a practice folder
 
-Clone a repository
+Most students use **Mac + PyCharm**, but we start with the **command line workflow** because it works everywhere.
 
-Create a branch
+---
 
-Commit changes
+# 📚 Useful Resources
 
-Push to GitHub
+**Git tutorial**
 
-Open a Pull Request
+https://git-scm.com/docs/gittutorial
 
-Modify files inside a practice/ folder
+**GitHub Hello World**
 
-Most of you will use Mac + PyCharm, but command-line instructions are provided first because they work everywhere.
+https://docs.github.com/en/get-started/quickstart/hello-world
 
-📌 Step 0 – Create a GitHub Account
+**Install Git**
 
-Go to https://github.com
-
-Create an account (use your academic email).
-
-Send your GitHub username to the lab admin to be added to the organization.
-
-💻 Step 1 – Install Git
-🍎 Mac (most students)
-
-Open Terminal and run:
-
-git --version
-
-If Git is not installed, macOS will prompt you to install Command Line Tools. Accept.
-
-🪟 Windows
-
-Install Git for Windows:
 https://git-scm.com/downloads
 
-Open Git Bash (recommended).
+**Markdown guide**
+
+https://www.markdownguide.org/basic-syntax/
+
+---
+
+# Step 0 — Create a GitHub Account
+
+1. Go to https://github.com  
+2. Create an account using your academic email  
+3. Send your **GitHub username** to the lab admin so you can be added to the organization
+
+---
+
+# Step 1 — Install Git
+
+<details>
+<summary><strong>Mac (most students)</strong></summary>
+
+Open **Terminal** and run:
+
+```bash
+git --version
+```
+
+If Git is not installed, macOS will prompt you to install **Command Line Tools**. Accept.
+
+</details>
+
+---
+
+<details>
+<summary><strong>Windows</strong></summary>
+
+1. Install **Git for Windows**
+
+https://git-scm.com/downloads
+
+2. Open **Git Bash** (recommended)
 
 Verify installation:
 
+```bash
 git --version
+```
 
-We recommend using Git Bash so you can copy/paste commands exactly as written below.
+Using **Git Bash** allows you to copy commands directly from this tutorial.
 
-🔐 Step 2 – Configure Git (First Time Only)
+</details>
+
+---
+
+# Step 2 — Configure Git (First Time Only)
 
 Run:
 
+```bash
 git config --global user.name "Your Name"
 git config --global user.email "your@email.com"
+```
 
-Make sure this email matches your GitHub account.
+Make sure the email matches your GitHub account.
 
-📥 Step 3 – Clone This Repository
+---
+
+# Step 3 — Clone This Repository
+
+```bash
 git clone https://github.com/YOUR-LAB-NAME/git-intro.git
 cd git-intro
-🌿 Step 4 – Create Your Own Branch
+```
+
+This downloads the repository to your computer.
+
+---
+
+# Step 4 — Create Your Own Branch
 
 Create a branch using your name:
 
+```bash
 git checkout -b add-yourname
+```
 
 Example:
 
+```bash
 git checkout -b add-alice-smith
-✏️ Step 5 – Add Yourself to students.md
+```
 
-Open students.md and add your name:
+Branches allow you to make changes without affecting the main project.
 
+---
+
+# Step 5 — Add Yourself to `students.md`
+
+Open the file:
+
+```
+students.md
+```
+
+Add your name at the bottom:
+
+```markdown
 - Alice Smith – PhD Student – 2026
+```
 
 Save the file.
 
-🧪 Step 6 – Complete the Practice Task
+---
 
-Go into the practice/ folder.
+# Step 6 — Practice Task
 
-Create a new file named:
+Inside the `practice/` folder create a new file named:
 
+```
 yourname.txt
+```
 
 Example:
 
+```
 alice-smith.txt
+```
 
-Inside the file, write:
+Inside the file write:
 
-Hello, GitHub!
+```
+Hello GitHub!
 This is my first branch and pull request.
+```
 
 Save the file.
 
-💾 Step 7 – Commit Your Changes
+---
+
+# Step 7 — Commit Your Changes
+
+```bash
 git add students.md practice/yourname.txt
 git commit -m "Add Alice Smith to students list and practice file"
-🚀 Step 8 – Push to GitHub
+```
+
+A **commit** records your changes.
+
+---
+
+# Step 8 — Push to GitHub
+
+```bash
 git push origin add-yourname
-🔁 Step 9 – Open a Pull Request
+```
 
-Go to the repository on GitHub.
+This uploads your branch to GitHub.
 
-Click Compare & pull request
+---
 
-Add a short description.
+# Step 9 — Open a Pull Request
 
-Click Create Pull Request
+1. Go to the repository on GitHub  
+2. Click **Compare & pull request**  
+3. Add a short description  
+4. Click **Create Pull Request**
 
 A lab admin will review and merge it.
 
-🎉 Congratulations — you’ve completed your first Git workflow!
+🎉 **Congratulations — you completed your first Git workflow!**
 
-🧠 What You Just Practiced
+---
 
-Cloning a repo
+# What You Just Learned
 
-Creating a branch
+You practiced:
 
-Editing files
+- cloning a repository
+- creating branches
+- editing files
+- committing changes
+- pushing to GitHub
+- creating pull requests
 
-Staging changes
+This is the **standard collaboration workflow used in the lab**.
 
-Committing
+---
 
-Pushing
+# Appendix — Using PyCharm Instead of the Terminal
 
-Opening a pull request
+<details>
+<summary><strong>PyCharm workflow</strong></summary>
 
-Code review workflow
+### Clone repository
 
-This is the standard workflow used in the lab.
+Open PyCharm → **Get from VCS**
 
-🧑‍💻 Appendix A – Using PyCharm Instead of Terminal
+Paste the repository URL and clone.
 
-If you prefer PyCharm:
+---
 
-Clone
+### Create a branch
 
-Open PyCharm
+Bottom right corner → click branch name → **New Branch**
 
-Select Get from VCS
+Name it:
 
-Paste the repo URL
+```
+add-yourname
+```
 
-Clone
+---
 
-Create Branch
+### Edit files
 
-Bottom right → click current branch
+Modify:
 
-New Branch
+```
+students.md
+practice/yourname.txt
+```
 
-Name it add-yourname
+---
 
-Edit Files
+### Commit
 
-Modify students.md
+Open the **Commit** tab.
 
-Create practice/yourname.txt
+Select the files, write a commit message, then click:
 
-Commit
+```
+Commit and Push
+```
 
-Open Commit tab
+---
 
-Select files
+### Open Pull Request
 
-Write commit message
+Go to the repository page on GitHub and create the pull request.
 
-Click Commit and Push
+</details>
 
-Open Pull Request
+---
 
-Go to GitHub in your browser and create the PR.
+# Lab Git Rules
 
-⚠️ Important Lab Rules
+Please follow these conventions:
 
-Never push directly to main
+- Always create a **branch** for changes
+- Never push directly to **main**
+- Use **pull requests** for merging
+- Write **clear commit messages**
 
-Always create a branch
+---
 
-Always open a Pull Request
+# Optional Challenge
 
-Keep commit messages clear and descriptive
+Try one of the following:
 
-🔥 Optional Challenge
+- Improve your `practice/` file and make a second commit
+- Edit this README and submit another pull request
+- Add a Markdown file instead of `.txt`
 
-Make a second commit improving your practice/ file
+---
 
-Edit this README and submit another PR
+# Repository Structure
 
-Add a markdown file instead of .txt
+```
+git-intro/
+│
+├── README.md
+├── students.md
+├── practice/
+│
+└── .gitignore
+```
+
+---
+
+# Maintainers
+
+Lab administrators review and merge pull requests.
+
+If you encounter problems, open a **GitHub issue** or ask a lab member.
