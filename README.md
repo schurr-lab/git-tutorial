@@ -99,7 +99,7 @@ Make sure the email matches your GitHub account.
 
 ```bash
 git clone https://github.com/schurr-lab/git-tutorial.git
-cd git-intro
+cd git-tutorial
 ```
 
 This downloads the repository to your computer.
@@ -296,7 +296,7 @@ Try one of the following:
 # Repository Structure
 
 ```
-git-intro/
+git-tutorial/
 │
 ├── README.md
 ├── students.md
