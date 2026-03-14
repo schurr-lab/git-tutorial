@@ -103,7 +103,7 @@ For example, many people keep code in a folder called `projects` or `repos`.
 
 ### Option A — Clone into the current folder
 
-Navigate to the directory where you want the repository to live:
+Navigate to the directory where you want the repository to live (use "/" or "\\" and not "\" as the latter will fail on Windows):
 
 ```bash
 cd path/to/your/projects
