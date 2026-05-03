@@ -1,2 +1,3 @@
 - Ksusha (Ksenia) Burgart – Research Assistant – 2026
 - Lior Batat - Msc Student - 2026
+- Eyal Hecht - Msc Student (proejct) - 2026
