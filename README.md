@@ -314,6 +314,11 @@ git push
 
 Doing this **at the end of every day** ensures your code is always backed up.
 
+Next time you start working on the project, or if you want to work on it from a different computer, start with pulling the latest version for github:
+```
+git pull
+```
+
 ---
 
 # Appendix — Using PyCharm Instead of the Terminal
